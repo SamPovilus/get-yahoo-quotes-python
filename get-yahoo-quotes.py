@@ -77,7 +77,7 @@ def get_now_epoch():
 
 
 def download_quotes(symbol):
-    start_date = 0
+    start_date = int(time.mktime(time.strptime("2018-08-27", "%Y-%m-%d")))
     end_date = get_now_epoch()
     cookie, crumb = get_cookie_crumb(symbol)
     get_data(symbol, start_date, end_date, cookie, crumb)
